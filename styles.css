@@ -10,8 +10,7 @@ body,html {
 .contain {
     display: flex;
     flex-direction: column;
-    gap: calc(1000vh / 5);
     font-size: 100px;
-    margin:0;
+    margin:100vh;
     padding: 0;
 }

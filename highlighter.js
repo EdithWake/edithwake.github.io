@@ -1,13 +1,18 @@
-#autoScroll
-#backgroundColor
-#flashFor
 export default class highlighter {
-    constructor(element, 
-        { autoScroll = true, backgroundColor = "white", flashFor = 5000 } = []
-    ) {
-        #autoScroll = autoScroll
-        #backgroundColor = backgroundColor
-        #flashFor = flashFor
-        console.log([#autoScroll, #backgroundColor, #flashFor])
+    #element
+    #autoScroll
+    #backgroundColor
+    #flashFor
+    constructor(elementId, 
+        { autoScroll = true, backgroundColor = "black", flashFor = 3000 } = {})
+        {
+        this.#element = elementId
+        this.#autoScroll = autoScroll
+        this.#backgroundColor = backgroundColor
+        this.#flashFor = flashFor
+    }
+
+    init(){
+        this.#element.scrollIntoView();
     }
 }
